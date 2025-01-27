@@ -10,6 +10,22 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
         crossorigin="anonymous"
     >
+    <style>
+        .custom-header {
+            color: #cc6633;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+        .custom-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
     
@@ -30,42 +46,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Strona główna</a>
+                        <a class="nav-link active" aria-current="page" href="/">Strona główna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a 
-                            class="nav-link dropdown-toggle" 
-                            href="#" 
-                            id="navbarDropdown" 
-                            role="button" 
-                            data-bs-toggle="dropdown" 
-                            aria-expanded="false"
-                        >
-                            Rozwijane
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Akcja</a></li>
-                            <li><a class="dropdown-item" href="#">Inna akcja</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Jeszcze coś</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Wyłączone</a>
+                        <a class="nav-link" href="/quiz">Quiz</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input 
-                        class="form-control me-2" 
-                        type="search" 
-                        placeholder="Szukaj" 
-                        aria-label="Szukaj"
-                    >
-                    <button class="btn btn-outline-light" type="submit">Szukaj</button>
-                </form>
+                <div class="d-flex">
+                    <a href="{{ url_for('security.logout') }}" class="btn btn-danger">Wyloguj się</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -94,7 +83,7 @@
     
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-pyGpQ5I3QhN4UybOCh7sElUwrxR3fEEghmOMMYP5RbI1yV7xopRs1G1Id16/6oyz" 
+        integrity="sha384-pyGpQ5I3QhN4UybOCh7sElUwrxR3fEEghmOMMYP5RbI1Y7xopRs1G1Id16/6oyz" 
         crossorigin="anonymous"
     ></script>
 </body>

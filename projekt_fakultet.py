@@ -10,6 +10,7 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'developerskie')
 app.config['SECURITY_PASSWORD_SALT'] = os.environ.get('SECURITY_PASSWORD_SALT', 'jakas-sol')
 app.config['SECURITY_REGISTERABLE'] = True
 app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
+app.config['SECURITY_POST_LOGIN_VIEW'] = '/quiz'
 
 db = SQLAlchemy(app)
 
@@ -64,6 +65,26 @@ def index():
     else:
         tasks = Task.query.filter_by(user_id=current_user.get_id()).all()
     return render_template("index.html", todo_list=tasks, filter=filter_by)
+
+
+@app.route("/quiz", methods=["GET", "POST"])
+@login_required
+def quiz():
+    questions = [
+        {"id": 1, "question": "Jaki jest wynik 2+2?", "options": ["3", "4", "5"], "answer": "4"},
+        {"id": 2, "question": "Stolica Polski to?", "options": ["Kraków", "Warszawa", "Gdańsk"], "answer": "Warszawa"}
+    ]
+
+    if request.method == "POST":
+        answers = request.form
+        score = 0
+        for q in questions:
+            if answers.get(str(q["id"])) == q["answer"]:
+                score += 1
+        flash(f"Twój wynik to {score}/{len(questions)}", "success")
+        return redirect(url_for("index"))
+
+    return render_template("quiz.html", questions=questions)
 
 
 @app.route("/add-task", methods=["POST"])
