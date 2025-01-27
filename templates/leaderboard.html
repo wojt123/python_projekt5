@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Tabela najlepszych wyników</h2>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Miejsce</th>
+                <th>Użytkownik</th>
+                <th>Wynik</th>
+                <th>Czas</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result, email in leaderboard %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ email }}</td>
+                <td>{{ result.score }}</td>
+                <td>{{ result.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
