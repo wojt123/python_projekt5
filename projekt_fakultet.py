@@ -71,7 +71,7 @@ def quiz():
         {"id": 5, "question": "Jak nazywa się kot, który ciągle próbuje złapać mysz Jerry'ego w popularnej kreskówce?", "options": ["Garfield", "Sylwester", "Tom", "Simba"], "answer": "Tom"},
         {"id": 6, "question": "Jak nazywa się zły kot, który poluje na smerfy w ich bajce?", "options": ["Klakier", "Azrael", "Tygrys", "Kot z Cheshire"], "answer": "Klakier"},
         {"id": 7, "question": "Która rasa kota jest znana z braku sierści?", "options": ["Maine Coon", "Sfinks", "Syjam", "Ragdoll"], "answer": "Sfinks"},
-        {"id": 8, "question": "Jaka jest najmniejsza naturalna rasa kota?", "options": ["Maine Coon", "Syjam", "Kot singapurski", "Devon Rex"], "answer": "Kot singapuski"},
+        {"id": 8, "question": "Jaka jest najmniejsza naturalna rasa kota?", "options": ["Maine Coon", "Syjam", "Kot singapurski", "Devon Rex"], "answer": "Kot singapurski"},
         {"id": 9, "question": "Jaką prędkość może osiągnąć gepard podczas polowania?", "options": ["40 km/h", "60 km/h", "80 km/h", "120 km/h"], "answer": "120 km/h"},
         {"id": 10, "question": "Jak koty odczuwają słodki smak?", "options": ["Bardzo intensywnie", "Podobnie jak ludzie", "Nie potrafią odczuwać smaku słodkiego", "Tylko w małym stopniu"], "answer": "Nie potrafią odczuwać smaku słodkiego"},
         {"id": 11, "question": "Która z ras kotów jest znana z braku ogona?", "options": ["Syjam", "Manx", "Ragdoll", "Sfinks"], "answer": "Manx"},
