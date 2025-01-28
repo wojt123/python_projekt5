@@ -46,9 +46,9 @@ Lista użytych bibliotek znajduje się w pliku `requirements.txt`. Kluczowe tech
 - **Baza danych**: Plik `quiz.db`.
 
 ## Autorzy 👨‍💻
-- **Wojciech Franczak
-- **Adam Włodarski
-- **Dawid Hraniuk
+- **Wojciech Franczak**
+- **Adam Włodarski**
+- **Dawid Hraniuk**
 
 ## Licencja 📄
 Projekt jest udostępniony na licencji MIT.
