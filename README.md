@@ -42,7 +42,8 @@ Lista użytych bibliotek znajduje się w pliku `requirements.txt`. Kluczowe tech
   - `index.html`: Strona główna.
   - `quiz.html`: Widok quizu.
   - `leaderboard.html`: Tabela wyników.
-  - `login.html`: Widok logowania.
+  - `login_user.html`: Widok logowania.
+  - `register_user.html`: Widok rejestracji.
 - **Baza danych**: Plik `quiz.db`.
 
 ## Autorzy 👨‍💻
