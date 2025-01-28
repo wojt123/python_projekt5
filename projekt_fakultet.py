@@ -11,7 +11,6 @@ app.config['SECURITY_PASSWORD_SALT'] = os.environ.get('SECURITY_PASSWORD_SALT', 
 app.config['SECURITY_REGISTERABLE'] = True
 app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
 app.config['SECURITY_POST_LOGIN_VIEW'] = '/quiz'
-#app.config['SECURITY_LOGIN_USER_TEMPLATE'] = 'login.html'
 
 db = SQLAlchemy(app)
 
@@ -65,8 +64,21 @@ def index():
 @login_required
 def quiz():
     questions = [
-        {"id": 1, "question": "Jaki jest wynik 2+2?", "options": ["3", "4", "5"], "answer": "4"},
-        {"id": 2, "question": "Stolica Polski to?", "options": ["Kraków", "Warszawa", "Gdańsk"], "answer": "Warszawa"}
+        {"id": 1, "question": "Które z poniższych miast uznaje się za „miasto kotów”?", "options": ["Ateny", "Warszawa", "Rzym", "Stambuł"], "answer": "Stambuł"},
+        {"id": 2, "question": "Jakie jest ulubione danie Garfielda?", "options": ["Pizza", "Warzywa", "Lasagne", "Spaghetti"], "answer": "Lasagne"},
+        {"id": 3, "question": "Ile palców ma kot na przednich łapach?", "options": ["3", "4", "5", "6"], "answer": "5"},
+        {"id": 4, "question": "Jaki jest największy gatunek kota na świecie?", "options": ["Tygrys syberyjski", "Puma", "Tygrys sumatrzański", "Lew"], "answer": "Tygrys syberyjski"},
+        {"id": 5, "question": "Jak nazywa się kot, który ciągle próbuje złapać mysz Jerry'ego w popularnej kreskówce?", "options": ["Garfield", "Sylwester", "Tom", "Simba"], "answer": "Tom"},
+        {"id": 6, "question": "Jak nazywa się zły kot, który poluje na smerfy w ich bajce?", "options": ["Klakier", "Azrael", "Tygrys", "Kot z Cheshire"], "answer": "Klakier"},
+        {"id": 7, "question": "Która rasa kota jest znana z braku sierści?", "options": ["Maine Coon", "Sfinks", "Syjam", "Ragdoll"], "answer": "Sfinks"},
+        {"id": 8, "question": "Jaka jest najmniejsza naturalna rasa kota?", "options": ["Maine Coon", "Syjam", "Kot singapurski", "Devon Rex"], "answer": "Kot singapurski"},
+        {"id": 9, "question": "Jaką prędkość może osiągnąć gepard podczas polowania?", "options": ["40 km/h", "60 km/h", "80 km/h", "120 km/h"], "answer": "120 km/h"},
+        {"id": 10, "question": "Jak koty odczuwają słodki smak?", "options": ["Bardzo intensywnie", "Podobnie jak ludzie", "Nie potrafią odczuwać smaku słodkiego", "Tylko w małym stopniu"], "answer": "Nie potrafią odczuwać smaku słodkiego"},
+        {"id": 11, "question": "Która z ras kotów jest znana z braku ogona?", "options": ["Syjam", "Manx", "Ragdoll", "Sfinks"], "answer": "Manx"},
+        {"id": 12, "question": "Dlaczego koty mają pionowe źrenice?", "options": ["Dla lepszej orientacji w przestrzeni", "Aby lepiej widzieć w słabym świetle", "Aby odstraszać wrogów", "Dla ochrony przed słońcem"], "answer": "Aby lepiej widzieć w słabym świetle"},
+        {"id": 13, "question": "Które koty jako jedyne żyją w stadach?", "options": ["Tygrysy", "Lwy", "Słonie", "Gepardy"], "answer": "Lwy"},
+        {"id": 14, "question": "Jakiego koloru są najczęściej oczy kotów syjamskich?", "options": ["Zielone", "Żółte", "Niebieskie", "Brązowe"], "answer": "Niebieskie"},
+        {"id": 15, "question": "Który z tych kotów występuje naturalnie na terenie Polski?", "options": ["Irbis", "Ocelot", "Lew", "Żbik"], "answer": "Żbik"}
     ]
 
     if request.method == "POST":
