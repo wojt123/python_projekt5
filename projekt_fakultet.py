@@ -11,7 +11,6 @@ app.config['SECURITY_PASSWORD_SALT'] = os.environ.get('SECURITY_PASSWORD_SALT', 
 app.config['SECURITY_REGISTERABLE'] = True
 app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
 app.config['SECURITY_POST_LOGIN_VIEW'] = '/quiz'
-#app.config['SECURITY_LOGIN_USER_TEMPLATE'] = 'login.html'
 
 db = SQLAlchemy(app)
 
